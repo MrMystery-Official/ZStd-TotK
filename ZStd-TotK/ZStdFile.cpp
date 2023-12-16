@@ -34,14 +34,6 @@ void ZStdFile::Initialize(std::string Path)
 	m_CompressDictBcettByaml = ZSTD_createCDict(DictBcettByaml->data(), DictBcettByaml->size(), 16);
 }
 
-/*
-	ZStdFile::Result Decompress(std::vector<unsigned char> Bytes, ZStdFile::Dictionary Dictionary);
-	ZStdFile::Result Decompress(std::string Path, ZStdFile::Dictionary Dictionary);
-
-	ZStdFile::Result Compress(std::vector<unsigned char> Bytes, ZStdFile::Dictionary Dictionary);
-	ZStdFile::Result Compress(std::string Path, ZStdFile::Dictionary Dictionary);
-*/
-
 ZStdFile::Result ZStdFile::Decompress(std::vector<unsigned char> Bytes, ZStdFile::Dictionary Dictionary)
 {
 	ZStdFile::Result Result;
